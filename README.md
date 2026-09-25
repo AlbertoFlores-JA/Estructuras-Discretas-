@@ -1,2 +1,4 @@
 *Nombre* Apolinar Flores Juan Alberto
-*Version de GHC* versión 9.10.3
+
+*Version de GHC* The Glorious Glasgow Haskell Compilation System, version 9.10.3
+
