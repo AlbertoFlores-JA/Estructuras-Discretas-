@@ -1,6 +1,6 @@
 **Principales diferencias entre haskell y rust**
 
-Haskell funciona como una calculadora con esteroides, es decir le das un dato y te regresa una respuesta, nunca va a alterar o cambiar cosas que no pediste, Haskell tampoco no hace ningún cálculo hasta que le digas que pero Rust sí, ejecuta las intrucciones exactamente una detrás de otra en el orden que se las escribiste.
+Haskell funciona como una calculadora con esteroides, es decir le das un dato y te regresa una respuesta, nunca va a alterar o cambiar cosas que no pediste, Haskell tampoco no hace ningún cálculo hasta que le ejecutes el comando explícitamente por eso dicen que es de evaluación perezosa. Pero Rust sí, ejecuta las intrucciones exactamente una detrás de otra en el orden que se las escribiste.
 Y Rust es un lenguaje pensado para construir cosas más enfocadas a los sistemas con un control absoluto, es decir que en Rust tienes un mayor control de todo en orden como escribiste, cuando Rust necesita limpiar su basura, necesitas escribir el codigo de forma ordenada para que la basura se tire cuando deje de ser útil, en cambio Haskell tiene "un trabajador " para que administre la basura,pero al no tener control total de él, a veces puede interrumpirse o pausas ocacionales en el sistema en tiempo real
 
 
