@@ -70,7 +70,12 @@ minutosHoras x = show (div x 60)++" horas y "++show (mod x 60)++" minutos "
 --esEstafa
 {-
 Función : esEstafa
-Descripción: La función recibe un primer valor "costo del producto"  el segundo valor corresponde a "el primer billete de alta denominación " el tercer parametro es "el cambio que recibe " y el cuarto valor es la "cantidad de cambio que devuelve el cliente cuando pide su billete de vuelta"
+Descripción: La función recibe 4 parametros: 
+(x) primer valor "costo del producto"  
+(y) segundo valor corresponde a "el primer billete de alta denominación " 
+(z) tercer parametro es "el cambio que recibe " 
+(w) cuarto valor es la "cantidad de cambio que devuelve el cliente cuando pide su billete de vuelta" 
+la funcion solo compara si la cantidad de cambio que devuelve "w" es menor al cambio que recibió y no volvio a regresar, si recibiera 
 Uso esEstafa 100 200 100 0 
             True           
 -}
@@ -97,15 +102,24 @@ esDescendente x y w z = x > y && y > w && w> z
 --imc
 {-
 función :imc
-Descripción: La función calcula tu imc con los dos valores que le asignes primero tu peso en kg y luego tu altura en metros y deacuerdo a los parámetros de la OMS determinan si es un parámetro bajo, normal, sobrepeso y obesidad
-Uso imc 53.5 161
-normal
+Descripción: La función calcula tu imc con los dos valores que le asignes primero tu peso en kg , luego tu altura en metros y deacuerdo a los parámetros de la OMS determinan si es un parámetro bajo peso, normal, obesidad leve, obesidad media, obesidad morbida 
+Uso imc 53.5 1.61
+    normal
 Nota: Usé la siguiente pagína de referencia https://www.gob.mx/issste/articulos/que-es-el-indice-de-masa-corporal
 -}
 imc :: Double -> Double -> String 
-imc x y = (x / (y*y))   
-    (x / y² )  < 18.9 
-    (x / y² )  < 24.99
-    (x / y² )  < 29.99
-    (x / y² )  < 34.99
+imc x y =  if x / (y*y) < 18.5 then "bajo peso"
+    else if ((x / (y*y))) < 24.99 then "normbal"
+    else if ((x / (y*y))) < 29.99 then "obesidad leve"
+    else if ((x / (y*y))) < 34.99 then "obesidad media"
+    else  "obesidad morbida"
+
+--hipotenusa
+{-
+Función : hipotenusa
+Descripción La funcion recibe dos parámetros de tipo flotante b y h donde b representa la base y h la altura, la funcion devuelve un valor de tipo flotante, que representa la el valor de la hipotenusa respecto a la base y la altura
+Uso 
+-}
+hipotenusa :: Float -> Float -> Float
+hipotenusa b h = sqrt (b * b + h * h)
 
