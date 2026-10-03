@@ -22,6 +22,7 @@ minimal (x:(y:xs)) = if x<y
     else minimal (y:xs)
 
 
+
 --Tarea laboratorio
 
 --reconversion 
@@ -65,31 +66,31 @@ Uso minutosHoras 112 1 hora con 52 minutos
 minutosHoras :: Int ->  String
 minutosHoras x = show (div x 60)++" horas y "++show (mod x 60)++" minutos "
 
-{-
+
 --esEstafa
 {-
-
-
-
-
-
+Función : esEstafa
+Descripción: La función recibe un primer valor "costo del producto"  el segundo valor corresponde a "el primer billete de alta denominación " el tercer parametro es "el cambio que recibe " y el cuarto valor es la "cantidad de cambio que devuelve el cliente cuando pide su billete de vuelta"
+Uso esEstafa 100 200 100 0 
+            True           
 -}
+esEstafa :: Int -> Int -> Int ->Int -> Bool
+esEstafa x y z w =  (y - x) == z && z > w
 
 
---esDescendiente
+
+
+--esDescendente
 {-
-Función: esDescendiente
+Función: esDescendente
 Descripción: la función recibe 4 parámetros x, y, z y w, nos devuelve un valor booleano
 True si están ordenados de mayor a menor
 False si los números no fueron ingresados de forma ascendente
-Uso esDescendiente 10, 9, 8, 7
-True
-Uso esDescendiente 10, 8, 9, 7
-False
+Uso 9 8 5 2 
+    True
 -}
-esDescendiente :: Int -> Int -> Int -> Int -> boolean
-esDescendiente x>y>w>z = true
-esDescendiente x<(acá me quedé)
+esDescendente :: Int -> Int -> Int -> Int -> Bool
+esDescendente x y w z = x > y && y > w && w> z 
 
 
 
@@ -99,6 +100,12 @@ función :imc
 Descripción: La función calcula tu imc con los dos valores que le asignes primero tu peso en kg y luego tu altura en metros y deacuerdo a los parámetros de la OMS determinan si es un parámetro bajo, normal, sobrepeso y obesidad
 Uso imc 53.5 161
 normal
+Nota: Usé la siguiente pagína de referencia https://www.gob.mx/issste/articulos/que-es-el-indice-de-masa-corporal
 -}
-imc :: Doble -> Int 
--}
+imc :: Double -> Double -> String 
+imc x y = (x / (y*y))   
+    (x / y² )  < 18.9 
+    (x / y² )  < 24.99
+    (x / y² )  < 29.99
+    (x / y² )  < 34.99
+
