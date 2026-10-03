@@ -17,4 +17,88 @@ Uso minimal x < x:xs
 minimal :: [Int] -> Maybe Int
 minimal [x] = Just x
 minimal [] = Nothing
-minimal (x:(y:xs)) = if x<y then minimal (x:xs) else minimal (y:xs)
+minimal (x:(y:xs)) = if x<y 
+    then minimal (x:xs) 
+    else minimal (y:xs)
+
+
+--Tarea laboratorio
+
+--reconversion 
+{-
+Función : reconversion
+Descripción : La función debe recibir un parámetro numeríco y debe hacer una conversion monetaria, quitándole tres ceros al valor ingresado.
+Uso reconversion 3000 -> 3.0
+-}
+reconversion :: Double -> Double 
+reconversion x = x / 1000
+
+--cashback
+{-
+Función: cashback
+Descripción: La función debe recibir un número y calcular el cashback con el 10%
+Uso cashback 230 -> 23.0
+Nota: use los numeros con punto decimal para incluir las posibles compras que incluyen centavos por ejemplo 200.40 $ y te da el cashback con el decimal, que no calcuraría con los valores de Int
+-}
+cashback :: Double -> Double
+cashback x = x*0.10
+
+--cashbackMonto
+{-
+Función: cashbackMonto
+Descripción: la función recibe un valor numérico y regresa el valor multiplicado por el valor de los puntos (0.10) que puede ser variable dependiendo el banco
+Uso cashbackMonto 200 0.10 -> 20.0
+Nota: Incluí que el valor del cashback fuera personalizable para incluir algun caso donde el banco te de menos conversión por cashback por ejemplo (0.11 o 0.09) por la planificación del problema 
+-}
+cashbackMonto :: Double -> Double -> Double
+cashbackMonto x y = x*y
+
+
+
+
+--minutosHoras
+{-
+Función: minutosHoras
+Descripción: La función recibe minutos y los pasa a horas
+Uso minutosHoras 112 1 hora con 52 minutos
+-}
+minutosHoras :: Int ->  String
+minutosHoras x = show (div x 60)++" horas y "++show (mod x 60)++" minutos "
+
+{-
+--esEstafa
+{-
+
+
+
+
+
+-}
+
+
+--esDescendiente
+{-
+Función: esDescendiente
+Descripción: la función recibe 4 parámetros x, y, z y w, nos devuelve un valor booleano
+True si están ordenados de mayor a menor
+False si los números no fueron ingresados de forma ascendente
+Uso esDescendiente 10, 9, 8, 7
+True
+Uso esDescendiente 10, 8, 9, 7
+False
+-}
+esDescendiente :: Int -> Int -> Int -> Int -> boolean
+esDescendiente x>y>w>z = true
+esDescendiente x<(acá me quedé)
+
+
+
+--imc
+{-
+función :imc
+Descripción: La función calcula tu imc con los dos valores que le asignes primero tu peso en kg y luego tu altura en metros y deacuerdo a los parámetros de la OMS determinan si es un parámetro bajo, normal, sobrepeso y obesidad
+Uso imc 53.5 161
+normal
+-}
+imc :: Doble -> Int 
+-}
