@@ -61,7 +61,7 @@ cashbackMonto x y = x*y
 {-
 Función: minutosHoras
 Descripción: La función recibe minutos y los pasa a horas
-Uso minutosHoras 112 1 hora con 52 minutos
+Uso minutosHoras 112 1 horas con 52 minutos
 -}
 minutosHoras :: Int ->  String
 minutosHoras x = show (div x 60)++" horas y "++show (mod x 60)++" minutos "
@@ -95,21 +95,21 @@ Uso 9 8 5 2
     True
 -}
 esDescendente :: Int -> Int -> Int -> Int -> Bool
-esDescendente x y w z = x > y && y > w && w> z 
+esDescendente x y z w = x > y && y > z && z > w 
 
 
 
 --imc
 {-
 función :imc
-Descripción: La función calcula tu imc con los dos valores que le asignes primero tu peso en kg , luego tu altura en metros y deacuerdo a los parámetros de la OMS determinan si es un parámetro bajo peso, normal, obesidad leve, obesidad media, obesidad morbida 
+Descripción: La función calcula tu imc con los dos valores que le asignes primero tu peso en kg , luego tu altura en metros  y deacuerdo a los parámetros de la OMS determinan si es un parámetro bajo peso, normal, obesidad leve, obesidad media, obesidad morbida 
 Uso imc 53.5 1.61
     normal
 Nota: Usé la siguiente pagína de referencia https://www.gob.mx/issste/articulos/que-es-el-indice-de-masa-corporal
 -}
 imc :: Double -> Double -> String 
 imc x y =  if x / (y*y) < 18.5 then "bajo peso"
-    else if ((x / (y*y))) < 24.99 then "normbal"
+    else if ((x / (y*y))) < 24.99 then "normal"
     else if ((x / (y*y))) < 29.99 then "obesidad leve"
     else if ((x / (y*y))) < 34.99 then "obesidad media"
     else  "obesidad morbida"
@@ -123,3 +123,21 @@ Uso
 hipotenusa :: Float -> Float -> Float
 hipotenusa b h = sqrt (b * b + h * h)
 
+--pendiente
+{-
+Función: pendiente
+Descripción : la función recibe dos parametros de tipo tupla, con dos elementos de tipo flotante respectivamente, y pendiente devuelve un valor tipo flotante que represente la pendiente de la recta que pasa por dos puntos 
+Uso pendiente (3.0, 2.0) (7.0, 8.0)
+    1.5
+-}
+pendiente :: (Float, Float) -> (Float, Float) -> Float
+pendiente (x1, y1) (x2, y2) = (y2 - y1) / (x2 - x1) 
+
+--distanciaPuntos
+{-
+Función : distanciaPuntos
+Descripción: debe recibir dos parámetros que serán tuplas de dos elementos de tipo flotante respectivamente, y la Funcion debe devolver un valor de tipo flotante que represente la distancia entre los puntos 
+Uso distanciaPuntos (2.0, 1.0) (5.0, 5.0) 
+-}
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos  (x1, y1) (x2, y2) = sqrt (((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1))) 
