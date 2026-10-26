@@ -1,3 +1,5 @@
+import ParConBit (esParBit)
+
 --Práctica 3
 {-
 Funcion : cetes 
@@ -79,10 +81,17 @@ negativos xs = sum [1 | x <- xs, x < 0]
 
 
 {-
-Funcion : 
-Descripcion: 
+Funcion : soloPares
+Descripcion: Recibe una lista de numeros enteros y devuelve otra lista con unicamente los numeros pares de la lista original
 Funcion:
+ghci > soloPares [1 ,2 ,3 ,4]
+ghci > [2 ,4]
 -}
+
+soloPares :: [Int] -> [Int]
+soloPares xs = [x | x <- xs, esParBit x]
+
+
 {-
 Funcion : 
 Descripcion: 
