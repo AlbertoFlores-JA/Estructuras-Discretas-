@@ -100,11 +100,15 @@ ghci > primos [1..20]
 ghci > [2 , 3 , 5 , 7 , 11 , 13 , 17 , 19]
 -}
 primos :: [Int] -> [Int]
-primos xs = [x| <- xs x > 1, null [d | d <- [2..x-1], x 'mod' d ==0]] 
+primos xs = [x| x <- xs, x > 1, null [d | d <- [2..x-1], x `mod` d ==0]] 
 
 
 {-
-Funcion : 
-Descripcion: 
+Funcion : coprimos
+Descripcion: recibe un enteron y devuelve una una lista de los coprimos
 Funcion:
+ghci > coprimos 10
+ghci > [1 ,3 ,7 ,9]
 -}
+coprimos :: Int -> [Int]
+coprimos n = [x | x <- [1..n-1], null [d | d <- [2..x], x `mod` d == 0, n `mod` d == 0]]
