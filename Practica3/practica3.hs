@@ -93,10 +93,16 @@ soloPares xs = [x | x <- xs, esParBit x]
 
 
 {-
-Funcion : 
-Descripcion: 
+Funcion : primos 
+Descripcion: Devuelve los numeros primos de una lista
 Funcion:
+ghci > primos [1..20]
+ghci > [2 , 3 , 5 , 7 , 11 , 13 , 17 , 19]
 -}
+primos :: [Int] -> [Int]
+primos xs = [x| <- xs x > 1, null [d | d <- [2..x-1], x 'mod' d ==0]] 
+
+
 {-
 Funcion : 
 Descripcion: 
