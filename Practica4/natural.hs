@@ -49,7 +49,13 @@ potencia  base  (S exponente) = multiNat base (potencia base exponente)
 {-===================================================================================-}
 
 {-
-Función:
-Descripción:
+Función:facNat
+Descripción:Devuelve un factorial de un natural dado
 Ejemplo:
+ghci > facNat ( S ( S ( S Cero ) ) )
+ghci > S ( S ( S ( S ( S ( S Cero ) ) ) ) )
 -}
+facNat :: Natural -> Natural
+facNat Cero = S(Cero)
+facNat (S nof) =  multiNat (S nof) (facNat nof)
+{-===================================================================================-}
