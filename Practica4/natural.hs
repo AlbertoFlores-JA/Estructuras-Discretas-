@@ -1,4 +1,5 @@
-data Natural = Cero | S Natural deriving (Eq, Show)
+module Natural where
+import Auxiliar
 {-===================================================================================-}
 {-
 Función:a_natural
@@ -38,9 +39,13 @@ Ejemplo:
 ghci > potencia ( S ( S ( S Cero ) ) ) ( S ( S Cero ) )
 ghci > S ( S ( S ( S ( S ( S ( S ( S ( S Cero ) ) ) ) ) ) ) )
 -}
+
 potenciaNatFacil :: Natural -> Natural -> Natural
 potenciaNatFacil n m = a_natural  ((a_entero n ) ^ (a_entero m))
 
+potencia :: Natural -> Natural -> Natural
+potencia _ Cero = S(Cero)
+potencia  base  (S exponente) = multiNat base (potencia base exponente)
 {-===================================================================================-}
 
 {-
