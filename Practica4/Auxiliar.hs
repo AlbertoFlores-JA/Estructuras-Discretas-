@@ -2,7 +2,7 @@ module Auxiliar where
 
 data Natural = Cero | S Natural deriving (Eq, Show)
 data Entero = Zero | Succ Entero | Neg Entero deriving ( Eq, Show)
-
+data Matrioska = Mati | Cont Matrioska deriving (Eq, Show)
 {- Suma de dos Naturales 
 -}
 sumaNat :: Natural -> Natural -> Natural
