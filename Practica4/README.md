@@ -1,6 +1,7 @@
 **Objetivo de la práctica:** 
 
 El objetivo de la practica es aplicar el conocimiento teorico de la recursion en haskell, aplicando funciones que se vuelvan a llamar en el codigo e intrucir variables declaradas al inicio, y usar funciones auxiliares para la correcta resolucion de problemas
+
 **Tiempo requerido:** 
 
 3-4 horas
@@ -26,6 +27,7 @@ La diferencia es sobre su especificacion, porque la de enteros.hs nos da cada po
 En cambio entero.hs reduce la cantidad de patrones porque una suma de un negativo es tecnicamene una resta, por eso puede separar la logica  de todos los casos posibles
 
 2. ¿Por qué se tiene implementada la operación mayorEnt en el archivo enteros.hs ?
+
 Porque nos da indicios de que signo debe tener la operacion que debe tener y si a la suma o resta, a cual le va a pegar el signo segun el caso asignado por eso depende de saber que numero o es mayor
 
 3. Si pudieras quedarte con una sola implementación. ¿Cuál sería? Justifica tu
